@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two-Page Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <button onclick="showScientificCalculator()">Scientific Calculator</button>
+        <button onclick="showSimpleCalculator()">Simple Calculator</button>
+
+        <!-- Scientific Calculator Page -->
+        <div id="scientificCalculator" class="calculator-page">
+            <h2>Scientific Calculator</h2>
+            <input type="text" id="sciDisplay" disabled>
+            <div class="buttons">
+                <button onclick="clearSciDisplay()">C</button>
+                <button onclick="appendSciInput('(')">(</button>
+                <button onclick="appendSciInput(')')">)</button>
+                <button onclick="appendSciInput('/')">/</button>
+                <button onclick="appendSciInput('7')">7</button>
+                <button onclick="appendSciInput('8')">8</button>
+                <button onclick="appendSciInput('9')">9</button>
+                <button onclick="appendSciInput('*')">*</button>
+                <button onclick="appendSciInput('4')">4</button>
+                <button onclick="appendSciInput('5')">5</button>
+                <button onclick="appendSciInput('6')">6</button>
+                <button onclick="appendSciInput('-')">-</button>
+                <button onclick="appendSciInput('1')">1</button>
+                <button onclick="appendSciInput('2')">2</button>
+                <button onclick="appendSciInput('3')">3</button>
+                <button onclick="appendSciInput('+')">+</button>
+                <button onclick="appendSciInput('0')">0</button>
+                <button onclick="appendSciInput('.')">.</button>
+                <button onclick="calculateSciResult()">=</button>
+                <button onclick="appendSciInput('Math.sqrt(')">√</button>
+                <button onclick="appendSciInput('Math.sin(')">sin</button>
+                <button onclick="appendSciInput('Math.cos(')">cos</button>
+                <button onclick="appendSciInput('Math.tan(')">tan</button>
+                <button onclick="appendSciInput('Math.log(')">log</button>
+            </div>
+        </div>
+
+        <!-- Simple Calculator Page -->
+        <div id="simpleCalculator" class="calculator-page" style="display: none;">
+            <h2>Simple Calculator</h2>
+            <input type="text" id="simpleDisplay" disabled>
+            <div class="buttons">
+                <button onclick="clearSimpleDisplay()">C</button>
+                <button onclick="appendSimpleInput('7')">7</button>
+                <button onclick="appendSimpleInput('8')">8</button>
+                <button onclick="appendSimpleInput('9')">9</button>
+                <button onclick="appendSimpleInput('/')">/</button>
+                <button onclick="appendSimpleInput('4')">4</button>
+                <button onclick="appendSimpleInput('5')">5</button>
+                <button onclick="appendSimpleInput('6')">6</button>
+                <button onclick="appendSimpleInput('*')">*</button>
+                <button onclick="appendSimpleInput('1')">1</button>
+                <button onclick="appendSimpleInput('2')">2</button>
+                <button onclick="appendSimpleInput('3')">3</button>
+                <button onclick="appendSimpleInput('-')">-</button>
+                <button onclick="appendSimpleInput('0')">0</button>
+                <button onclick="appendSimpleInput('.')">.</button>
+                <button onclick="calculateSimpleResult()">=</button>
+                <button onclick="appendSimpleInput('+')">+</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
